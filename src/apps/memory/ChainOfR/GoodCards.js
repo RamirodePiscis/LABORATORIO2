@@ -1,5 +1,6 @@
 import LogicGame from "./LogicGame";
 
+// cualquier
 class GoodCards extends LogicGame{
     process(twice, item, stateBoard, setStateBoard){
         const [item1, item2] = twice;
