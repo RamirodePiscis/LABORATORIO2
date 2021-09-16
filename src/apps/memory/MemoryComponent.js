@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CardComponent } from "./CardComponent";
+import { ContadorComponent } from "./ContadorComponent";
 import GoodCards from "./ChainOfR/GoodCards";
 import OneCard from "./ChainOfR/OneCard";
 import TwoCard from "./ChainOfR/TwoCard";
@@ -17,7 +18,6 @@ export const MemoryComponent = () => {
     useEffect(() => {
         list = createBoard(10);
         setStateBoard(list);
-        console.log(list);
     }, []);
     const [stateBoard, setStateBoard] = useState(list);
     const handlerClick = ({ id }) =>{
@@ -63,6 +63,7 @@ export const MemoryComponent = () => {
         // });
         // setStateBoard(newStateBoard);
     };
+
     return(
     <div>
         <h1>Memory app</h1>
@@ -75,6 +76,15 @@ export const MemoryComponent = () => {
                 handlerClick={handlerClick}/>
             ))}
         </div>
+        <header className="app-header">
+
+        {twice.map((item) => (
+            <ContadorComponent  
+            item={item} 
+            name="lo"
+            />))}
+                
+        </header> 
     </div>
     );
 };

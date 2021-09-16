@@ -8,8 +8,10 @@ class GoodCards extends LogicGame{
                 if(item.id === item1.id || item.id === item2.id) {
                         item.done = true;
                 }  
+                
                 return item;                       
             });
+            
             setStateBoard(newStateBoard);
     }
 }
